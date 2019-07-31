@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import WebsiteArticlePhotocard from "./WebsiteArticlePhotocard"
 import _ from "lodash"
 
-
-
-
 class ArticleFlexBox extends Component {
-
   constructor(props){
     super(props);
 
-    // active
+    // active variable is the last one
+    //that was clicked
     this.state={
       active: null
     }
@@ -22,6 +19,8 @@ class ArticleFlexBox extends Component {
     })
   }
   render(){
+    // we use the article_url to send the user tothat location
+    // and the active is a boolean to show or hide entire text
     return(
       <section className="photocard-box">
       {_.map(this.props.list,(article,index)=>{
@@ -41,17 +40,19 @@ class ArticleFlexBox extends Component {
             header={header}
             onClick={()=>{this.setActiveArcticle(index)}}
             article_url={article_url}
-
             active={index===this.state.active}/>
         );
       })}
       </section>
 
-    )
+
   }
 }
 
-
+/*
+the Prop types are what is required for the array of objects to pass to the
+article flex box, the rest are derived from the internal state.
+*/
 ArticleFlexBox.propTypes = {
   list: PropTypes.arrayOf(PropTypes.shape({
     programmingLanguage: PropTypes.string,
