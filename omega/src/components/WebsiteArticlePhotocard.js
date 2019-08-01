@@ -12,7 +12,7 @@ function WebsiteArticlePhotocard(props){
     <LongPressSensor article_url={props.article_url}>
       <article onClick={props.onClick} data-source={props.article_url} className="photocard">
       <img alt="Brought to you By: OmegaArticles" src={props.imgURL} />
-        <p className="article-source">{props.site_host}</p>
+        {props.active && <p className="article-source">{props.site_host}</p>}
         <p className="language">{props.lang}</p>
         <span className="header">
           <p>{header}</p>

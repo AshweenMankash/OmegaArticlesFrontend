@@ -44,8 +44,7 @@ class ArticleFlexBox extends Component {
         );
       })}
       </section>
-
-
+    );
   }
 }
 
