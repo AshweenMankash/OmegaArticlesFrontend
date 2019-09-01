@@ -54,10 +54,10 @@
   background-color:#ffffff;
   font-size: 8px;
   padding: 8px;
-  box-shadow: 7px 7px 3px #e9ecef;
+  box-shadow: 7px 7px 10px #ddd;
   overflow: visible;
   font-size: 15px;
-  border-radius: 4px;
+  border-radius: 5px;
 
   -webkit-border-topzleft-radius: 5px;
   -webkit-border-top-right-radius: 5px;
